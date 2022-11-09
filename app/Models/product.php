@@ -10,4 +10,8 @@ class product extends Model
     use HasFactory;
     protected $table="product";
     public $timestamps=false;
+     public function cart()
+    {
+      return $this->hasOne(cart::class);
+    }
 }                         
